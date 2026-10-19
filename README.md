@@ -12,7 +12,7 @@ Course project for Advanced Software Paradigms (CSCI 6221), George Washington Un
 
 Done:
 - [x] Request/response with a local Ollama model
-- [x] Attack library: 5 attacks across 5 categories
+- [x] Attack library: 6 attacks across 6 categories
 - [x] Mutation engine: plain, story, poem, json, reversed, base64
 - [x] Canary-based detector (plain, reversed and base64 forms) behind a `Detector` trait
 - [x] Repeated trials with leak rates per attack and mutation
