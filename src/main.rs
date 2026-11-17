@@ -5,7 +5,7 @@ mod report;
 mod target;
 
 use detector::{CanaryDetector, Detector, Verdict};
-use report::{severity, write_json, CellResult, MutationSummary, Report};
+use report::{severity, write_html, write_json, CellResult, MutationSummary, Report};
 use std::time::{SystemTime, UNIX_EPOCH};
 use target::{BoxError, MockTarget, OllamaTarget, Target};
 
@@ -113,6 +113,7 @@ async fn main() -> Result<(), BoxError> {
     };
 
     write_json(&report, "verdigris-report.json")?;
-    println!("\nReport written to verdigris-report.json");
+    write_html(&report, "verdigris-report.html")?;
+    println!("\nReports written to verdigris-report.json and verdigris-report.html");
     Ok(())
 }
