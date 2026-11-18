@@ -21,9 +21,10 @@ Done:
 - [x] `Detector` trait with a canary detector (plain, reversed, base64) and refusal awareness
 - [x] Repeated trials, leak rate per attack and mutation, severity (LOW / MEDIUM / HIGH)
 - [x] JSON report and self-contained HTML report with heatmap and reproduction evidence
+- [x] Command-line options and an OpenAI-compatible target
 - [x] Unit tests (`cargo test`)
 
-Planned: command-line options, OpenAI-compatible target, judge-model detector, parallel requests.
+Planned: judge-model detector, parallel requests.
 
 ## Requirements
 
@@ -39,6 +40,11 @@ Scan a local model (takes several minutes):
 Scan a built-in fake model, no Ollama needed (instant):
 
     VERDIGRIS_MOCK=1 cargo run
+
+Options (`cargo run -- --help` shows them all):
+
+    cargo run -- --trials 10 --out my-report
+    cargo run -- --target openai --url http://localhost:11434/v1 --model llama3.2:3b
 
 Run the tests:
 

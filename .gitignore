@@ -2,3 +2,5 @@
 verdigris-report.json
 verdigris-report.html
 .DS_Store
+demo-run/
+release-demo/
